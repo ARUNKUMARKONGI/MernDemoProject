@@ -1,0 +1,7 @@
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+.card button {
+  margin-top: 15px;
+}
