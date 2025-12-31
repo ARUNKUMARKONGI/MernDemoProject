@@ -1,0 +1,31 @@
+cd D:\merndemo
+git init
+git add .
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/yourusername/yourrepo.git
+git push -u origin main
+
+
+later after any changes
+---------------------------
+cd D:\merndemo
+git status
+git add .
+git commit -m "updated files"
+git push
+
+
+clone
+----------------
+cd D:\
+git clone https://github.com/yourusername/yourrepo.git
+cd projectfoldername
+cd backend
+npm install
+node server.js
+
+cd ..
+cd frontend
+npm install
+npm start
