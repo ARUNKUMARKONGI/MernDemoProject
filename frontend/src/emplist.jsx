@@ -9,7 +9,7 @@ function Emplist() {
   const [maxsal,setmaxsal] = useState("")
 
   const load = () => {
-    const url = `http://localhost:5000/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}`
+    const url = `https://merndemoprojectarun.onrender.com/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setlist(data))
