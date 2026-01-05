@@ -48,4 +48,4 @@ app.get("/getemp",(req,res)=>{
     emp_model.find(query).then(data=>res.json(data))
 })
 
-app.listen(5000)
+app.listen(process.env.PORT || 5000)
