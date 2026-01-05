@@ -15,7 +15,7 @@ const emp_schema = new mongoose.Schema({
     salary:Number
 })
 
-const emp_model = mongoose.model("emp",emp_schema)
+const emp_model = mongoose.model("employees",emp_schema)
 
 app.post("/addemp",(req,res)=>{
     const emp = new emp_model({
