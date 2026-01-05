@@ -6,7 +6,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect("mongodb://localhost:27017/employee")
+mongoose.connect(process.env.MONGO_URL)
 
 const emp_schema = new mongoose.Schema({
     emp_id:String,
