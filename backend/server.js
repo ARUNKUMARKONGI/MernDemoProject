@@ -51,4 +51,18 @@ app.get("/getemp",(req,res)=>{
     emp_model.find(query).then(data=>res.json(data))
 })
 
+app.delete("/delemp/:id",async(req,res)=>{
+    try{
+        const result = await emp_model.deleteOne({ emp_id:req.params.id })
+        if(result.deletedCount === 0){
+            res.status(404).json("employee not found")
+        }else{
+            res.json("employee deleted")
+        }
+    }catch(err){
+        res.status(500).json("server error")
+    }
+})
+
+
 app.listen(process.env.PORT || 5000)
