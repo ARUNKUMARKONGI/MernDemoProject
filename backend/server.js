@@ -17,15 +17,18 @@ const emp_schema = new mongoose.Schema({
 
 const emp_model = mongoose.model("employees",emp_schema)
 
-app.post("/addemp",(req,res)=>{
-    const emp = new emp_model({
-        emp_id:req.body.emp_id,
-        emp_name:req.body.emp_name,
-        dept:req.body.dept,
-        salary:req.body.salary
-    })
-    emp.save()
-    res.send("employee added")
+app.post("/addemp",async(req,res)=>{
+    try{
+        const emp = new emp_model(req.body)
+        await emp.save()
+        res.json("employee added")
+    }catch(err){
+        if(err.code === 11000){
+            res.status(400).json("employee with id already exists")
+        }else{
+            res.status(500).json("server error")
+        }
+    }
 })
 
 app.get("/getemp",(req,res)=>{
