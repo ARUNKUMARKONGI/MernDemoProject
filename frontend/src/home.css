@@ -1,0 +1,45 @@
+.home-container {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  overflow: hidden;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.card-hover {
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-img-top-custom {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.animate-fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
