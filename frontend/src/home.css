@@ -51,7 +51,12 @@
 }
 
 .home-icon {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.home-card:hover .home-icon {
+  transform: scale(1.15) rotate(3deg);
 }
