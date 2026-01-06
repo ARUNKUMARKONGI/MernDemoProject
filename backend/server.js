@@ -48,8 +48,19 @@ app.get("/getemp",(req,res)=>{
         if(req.query.maxsal) query.salary.$lte = Number(req.query.maxsal)
     }
 
-    emp_model.find(query).then(data=>res.json(data))
+    const sortobj = {}
+
+    if(req.query.sortby === "id"){
+        sortobj.emp_id = 1
+    }
+
+    if(req.query.sortby === "name"){
+        sortobj.emp_name = 1
+    }
+
+    emp_model.find(query).sort(sortobj).then(data=>res.json(data))
 })
+
 
 app.delete("/delemp/:id",async(req,res)=>{
     try{
