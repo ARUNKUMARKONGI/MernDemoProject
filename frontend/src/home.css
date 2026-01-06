@@ -1,36 +1,24 @@
 .home-wrapper {
   min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   position: relative;
-  background: linear-gradient(
-    135deg,
-    #0f2027,
-    #203a43,
-    #2c5364
-  );
   overflow: hidden;
 }
 
 .animated-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at 20% 30%,
-    rgba(255,255,255,0.1),
-    transparent 40%
-  ),
-  radial-gradient(
-    circle at 80% 70%,
-    rgba(255,255,255,0.08),
-    transparent 40%
-  );
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08), transparent 40%);
   animation: floatbg 12s ease-in-out infinite;
   z-index: 0;
 }
 
 @keyframes floatbg {
-  0% { transform: translateY(0px); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-30px); }
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(0); }
 }
 
 .home-content {
@@ -40,13 +28,12 @@
 }
 
 .home-card {
-  border-radius: 16px;
-  background: white;
+  border-radius: 18px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .home-card:hover {
-  transform: translateY(-14px) scale(1.04);
+  transform: translateY(-14px) scale(1.05);
   box-shadow: 0 25px 50px rgba(0,0,0,0.35);
 }
 
@@ -58,5 +45,14 @@
 }
 
 .home-card:hover .home-icon {
-  transform: scale(1.15) rotate(3deg);
+  transform: scale(1.2) rotate(5deg);
+}
+
+.stats-card {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
