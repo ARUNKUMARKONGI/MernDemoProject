@@ -7,15 +7,27 @@ function Emplist() {
   const [dept,setdept] = useState("")
   const [minsal,setminsal] = useState("")
   const [maxsal,setmaxsal] = useState("")
+  const [sortby,setsortby] = useState("")
 
   const load = () => {
-    const url = `https://merndemoprojectarun.onrender.com/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}`
+    const url = `https://merndemoprojectarun.onrender.com/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}&sortby=${sortby}`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setlist(data))
   }
 
-  useEffect(()=>{ load() },[])
+  const delemp = (id) => {
+    fetch(`https://merndemoprojectarun.onrender.com/delemp/${id}`,{
+      method:"DELETE"
+    })
+    .then(res=>res.json())
+    .then(msg=>{
+      alert(msg)
+      load()
+    })
+  }
+
+  useEffect(()=>{ load() },[sortby])
 
   return (
     <div className="container mt-5">
@@ -45,6 +57,16 @@ function Emplist() {
           </div>
         </div>
 
+        <div className="row mb-3">
+          <div className="col-3">
+            <select className="form-select" onChange={e=>setsortby(e.target.value)}>
+              <option value="">Sort By</option>
+              <option value="id">Employee ID</option>
+              <option value="name">Employee Name</option>
+            </select>
+          </div>
+        </div>
+
         <table className="table table-striped table-hover mt-3">
           <thead className="table-dark">
             <tr>
@@ -52,6 +74,7 @@ function Emplist() {
               <th>Name</th>
               <th>Dept</th>
               <th>Salary</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -61,10 +84,14 @@ function Emplist() {
                 <td>{e.emp_name}</td>
                 <td>{e.dept}</td>
                 <td>{e.salary}</td>
+                <td>
+                  <button className="btn btn-danger btn-sm" onClick={()=>delemp(e.emp_id)}>Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+
       </div>
     </div>
   )
