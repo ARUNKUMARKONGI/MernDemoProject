@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
-import "./home.css"
+import "./Home.css"
 
 function Home() {
   return (
     <div className="home-wrapper">
-      <div className="particles-bg"></div>
+      <div className="animated-bg"></div>
 
       <div className="container home-content">
-        <div className="text-center mb-5 text-white">
-          <h1 className="fw-bold display-5">
+        <div className="text-center text-white mb-5">
+          <h1 className="display-4 fw-bold">
             Employee Management System
           </h1>
           <p className="lead">
@@ -19,10 +19,14 @@ function Home() {
         <div className="row justify-content-center">
           <div className="col-md-5 mb-4">
             <Link to="/add" className="text-decoration-none">
-              <div className="card shadow-lg p-5 text-center h-100 home-card">
-                <h3>Add Employee</h3>
+              <div className="card home-card text-center p-5 h-100">
+                <img
+                  src="/add_employee.svg"
+                  className="home-icon"
+                />
+                <h3 className="mt-3">Add Employee</h3>
                 <p className="text-muted">
-                  Add employee details to database
+                  Add new employee details to database
                 </p>
                 <button className="btn btn-primary mt-3">
                   Go
@@ -33,8 +37,12 @@ function Home() {
 
           <div className="col-md-5 mb-4">
             <Link to="/list" className="text-decoration-none">
-              <div className="card shadow-lg p-5 text-center h-100 home-card">
-                <h3>View Employees</h3>
+              <div className="card home-card text-center p-5 h-100">
+                <img
+                  src="/view_employee.svg"
+                  className="home-icon"
+                />
+                <h3 className="mt-3">View Employees</h3>
                 <p className="text-muted">
                   Search, sort and manage employees
                 </p>
