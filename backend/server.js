@@ -9,7 +9,7 @@ app.use(express.json())
 mongoose.connect(process.env.MONGO_URL)
 
 const emp_schema = new mongoose.Schema({
-    emp_id:String,
+    emp_id:{ type:String, required:true, unique:true },
     emp_name:String,
     dept:String,
     salary:Number
