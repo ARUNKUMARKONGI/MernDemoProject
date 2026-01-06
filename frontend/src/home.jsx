@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles"
 import { useCallback } from "react"
-import "./Home.css"
+import "./home.css"
 
 function Home() {
 
