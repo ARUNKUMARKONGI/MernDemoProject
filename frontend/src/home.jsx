@@ -21,7 +21,7 @@ function Home() {
             <Link to="/add" className="text-decoration-none">
               <div className="card home-card text-center p-5 h-100">
                 <img
-                  src="/add_employee.svg"
+                  src="/add_employee.png"
                   className="home-icon"
                 />
                 <h3 className="mt-3">Add Employee</h3>
@@ -39,7 +39,7 @@ function Home() {
             <Link to="/list" className="text-decoration-none">
               <div className="card home-card text-center p-5 h-100">
                 <img
-                  src="/view_employee.svg"
+                  src="/view_employees.png"
                   className="home-icon"
                 />
                 <h3 className="mt-3">View Employees</h3>
