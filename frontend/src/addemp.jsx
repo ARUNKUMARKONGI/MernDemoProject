@@ -8,7 +8,7 @@ function Addemp() {
   const [salary,setsalary] = useState("")
 
   const addemp = () => {
-    fetch("https://merndemoprojectarun.onrender.com/addemp",{
+    fetch("http://localhost:5000/addemp",{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify({

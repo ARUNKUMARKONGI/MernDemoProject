@@ -1,4 +1,5 @@
 To install react first node js should be installed in windows
+Mern-> node js react using netlify and backend in render, database mongodb atlas
 
 inside main project folder create 2 subfolders
 

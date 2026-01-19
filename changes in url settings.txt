@@ -1,0 +1,8 @@
+fetch("http://localhost:5000/addemp" in addemp.js if running locally
+
+or 
+ fetch("https://merndemoprojectarun.onrender.com/addemp" if running using render.
+
+
+similarly in emplist.js
+ const url = `https://merndemoprojectarun.onrender.com/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}`

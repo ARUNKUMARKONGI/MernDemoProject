@@ -28,4 +28,4 @@ node server.js
 cd ..
 cd frontend
 npm install
-npm start
+npm run dev

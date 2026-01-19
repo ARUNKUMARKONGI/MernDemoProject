@@ -10,14 +10,14 @@ function Emplist() {
   const [sortby,setsortby] = useState("")
 
   const load = () => {
-    const url = `https://merndemoprojectarun.onrender.com/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}&sortby=${sortby}`
+    const url = `http://localhost:5000/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}&sortby=${sortby}`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setlist(data))
   }
 
   const delemp = (id) => {
-    fetch(`https://merndemoprojectarun.onrender.com/delemp/${id}`,{
+    fetch(`http://localhost:5000/delemp/${id}`,{
       method:"DELETE"
     })
     .then(res=>res.json())
