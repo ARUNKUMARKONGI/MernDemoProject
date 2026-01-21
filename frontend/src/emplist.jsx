@@ -10,7 +10,7 @@ function Emplist() {
   const [sortby,setsortby] = useState("")
 
   const load = () => {
-    const url = `http://localhost:5000/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}&sortby=${sortby}`
+    const url = `https://merndemoprojectarun.onrender.com/getemp?name=${name}&dept=${dept}&minsal=${minsal}&maxsal=${maxsal}&sortby=${sortby}`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setlist(data))
