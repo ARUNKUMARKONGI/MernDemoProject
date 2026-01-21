@@ -5,7 +5,7 @@ import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/MernDemoProject-v2">   {/* <- repo name */}
+    <BrowserRouter basename="/MernDemoProject">   {/* <- repo name */}
       <App />
     </BrowserRouter>
   </React.StrictMode>

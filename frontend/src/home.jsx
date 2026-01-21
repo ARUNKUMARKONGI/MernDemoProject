@@ -41,7 +41,7 @@ function Home() {
           <div className="col-md-5 mb-4">
             <Link to="/add" className="text-decoration-none">
               <div className="card home-card text-center p-5 h-100">
-                <img src="/MernDemoProject-v2/add_employee.png" className="home-icon" />
+                <img src="/MernDemoProject/add_employee.png" className="home-icon" />
                 <h3 className="mt-3">Add Employee</h3>
                 <p className="text-muted">
                   Insert employee details securely
@@ -54,7 +54,7 @@ function Home() {
           <div className="col-md-5 mb-4">
             <Link to="/list" className="text-decoration-none">
               <div className="card home-card text-center p-5 h-100">
-              <img src="/MernDemoProject-v2/view_employees.png" className="home-icon" />
+              <img src="/MernDemoProject/view_employees.png" className="home-icon" />
                 <h3 className="mt-3">View Employees</h3>
                 <p className="text-muted">
                   Search, sort and delete records
